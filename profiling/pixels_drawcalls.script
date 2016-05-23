@@ -1,0 +1,46 @@
+--pdrawcalls="opengl: Pixels Drawn" gl_pixels.trace
+#	call no	program	name	Pixels Drawn
+call	1069	0	glClear	0
+frame_end
+call	1080	0	glClear	0
+call	1082	0	glDrawArrays	0
+frame_end
+call	1085	0	glClear	0
+call	1087	0	glDrawArrays	1
+frame_end
+call	1090	0	glClear	0
+call	1092	0	glDrawArrays	2
+frame_end
+call	1095	0	glClear	0
+call	1097	0	glDrawArrays	3
+frame_end
+call	1100	0	glClear	0
+call	1102	0	glDrawArrays	4
+frame_end
+call	1105	0	glClear	0
+call	1107	0	glDrawArrays	5
+frame_end
+call	1110	0	glClear	0
+call	1112	0	glDrawArrays	6
+frame_end
+call	1115	0	glClear	0
+call	1117	0	glDrawArrays	7
+frame_end
+call	1120	0	glClear	0
+call	1122	0	glDrawArrays	8
+frame_end
+call	1125	0	glClear	0
+call	1127	0	glDrawArrays	9
+frame_end
+call	1130	0	glClear	0
+call	1132	0	glDrawArrays	10
+frame_end
+call	1135	0	glClear	0
+call	1137	0	glDrawArrays	11
+frame_end
+call	1140	0	glClear	0
+call	1142	0	glDrawArrays	12
+frame_end
+call	1145	0	glClear	0
+call	1147	0	glDrawArrays	13
+frame_end
