@@ -137,6 +137,7 @@ add_subdirectory (thirdparty/glad)
 
 add_subdirectory (apps)
 add_subdirectory (traces)
+add_subdirectory (profiling)
 
 # FIXME: Some of these tests are not reliable on some platforms:
 #
