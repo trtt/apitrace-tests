@@ -84,7 +84,15 @@ class ProfilingDriver(Driver):
         args = shlex.split(refStream.readline())
         cmd = [self.options.apitrace, 'replay'] + args
 
-        p = popen(cmd, cwd=cwd, stdout=subprocess.PIPE, universal_newlines=True)
+        p = popen(cmd, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                  universal_newlines=True)
+
+        # Blocks stdout, profiling ouput is generated at the end anyway
+        for line in iter(p.stderr.readline, ''):
+            if line.startswith('Warning:'):
+                # Some metric or backend from the script not supported by HW
+                # Subprocess keeps running after the skip (NEEDS FIXING)
+                skip()
 
         comparer = AsciiComparer(p.stdout, refStream, self.options.verbose)
         comparer.compare()
