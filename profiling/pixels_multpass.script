@@ -1,3 +1,5 @@
+# Here frames and draw calls are bound to be profiled in different passes, since
+# occlusion queries cannot be nested in opengl
 --pframes="opengl: Pixels Drawn" --pdrawcalls="opengl: Pixels Drawn" gl_pixels.trace
 #	Pixels Drawn
 frame	0
