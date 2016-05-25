@@ -81,7 +81,11 @@ class ProfilingDriver(Driver):
         refStream = open(refScript, 'rt')
         cwd = os.path.dirname(os.path.abspath(refScript))
 
-        args = shlex.split(refStream.readline())
+        line = refStream.readline()
+        while line.startswith('#'):
+            # skip comments
+            line = refStream.readline()
+        args = shlex.split(line)
         cmd = [self.options.apitrace, 'replay'] + args
 
         p = popen(cmd, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
